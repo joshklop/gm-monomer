@@ -115,8 +115,8 @@ import (
 	// this line is used by starport scaffolding # stargate/app/moduleImport
 
 	// overide ibc module to allow Polymer specific ibc light clients
-	// ibc "github.com/cosmos/ibc-go/v7/modules/core"
-	"github.com/polymerdao/polymerase/chain/x/ibc"
+	ibc "github.com/cosmos/ibc-go/v7/modules/core"
+	//"github.com/polymerdao/polymerase/chain/x/ibc"
 
 	appparams "github.com/joshklop/gm/app/params"
 	"github.com/joshklop/gm/docs"

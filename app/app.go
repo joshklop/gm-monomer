@@ -99,7 +99,6 @@ import (
 	"github.com/cosmos/ibc-go/v7/modules/apps/transfer"
 	ibctransferkeeper "github.com/cosmos/ibc-go/v7/modules/apps/transfer/keeper"
 	ibctransfertypes "github.com/cosmos/ibc-go/v7/modules/apps/transfer/types"
-	ibc "github.com/cosmos/ibc-go/v7/modules/core"
 	ibcclient "github.com/cosmos/ibc-go/v7/modules/core/02-client"
 	ibcclientclient "github.com/cosmos/ibc-go/v7/modules/core/02-client/client"
 	ibcclienttypes "github.com/cosmos/ibc-go/v7/modules/core/02-client/types"
@@ -115,8 +114,16 @@ import (
 	gmmoduletypes "github.com/joshklop/gm/x/gm/types"
 	// this line is used by starport scaffolding # stargate/app/moduleImport
 
+	// overide ibc module to allow Polymer specific ibc light clients
+	// ibc "github.com/cosmos/ibc-go/v7/modules/core"
+	"github.com/polymerdao/polymerase/chain/x/ibc"
+
 	appparams "github.com/joshklop/gm/app/params"
 	"github.com/joshklop/gm/docs"
+
+	rollupmodule "github.com/polymerdao/polymerase/chain/x/rollup"
+	rollupkeeper "github.com/polymerdao/polymerase/chain/x/rollup/keeper"
+	rollupmoduletypes "github.com/polymerdao/polymerase/chain/x/rollup/types"
 )
 
 const (
@@ -174,6 +181,7 @@ var (
 		vesting.AppModuleBasic{},
 		consensus.AppModuleBasic{},
 		gmmodule.AppModuleBasic{},
+		rollupmodule.AppModuleBasic{},
 		// this line is used by starport scaffolding # stargate/app/moduleBasic
 	)
 
@@ -250,6 +258,7 @@ type App struct {
 	ScopedICAHostKeeper  capabilitykeeper.ScopedKeeper
 
 	GmKeeper gmmodulekeeper.Keeper
+	RollupKeeper  *rollupkeeper.Keeper
 	// this line is used by starport scaffolding # stargate/app/keeperDeclaration
 
 	// mm is the module manager
@@ -297,6 +306,7 @@ func New(
 		feegrant.StoreKey, evidencetypes.StoreKey, ibctransfertypes.StoreKey, icahosttypes.StoreKey,
 		capabilitytypes.StoreKey, group.StoreKey, icacontrollertypes.StoreKey, consensusparamtypes.StoreKey,
 		gmmoduletypes.StoreKey,
+		rollupmoduletypes.StoreKey,
 		// this line is used by starport scaffolding # stargate/app/storeKey
 	)
 	tkeys := sdk.NewTransientStoreKeys(paramstypes.TStoreKey)
@@ -438,6 +448,16 @@ func New(
 	)
 
 	// ... other modules keepers
+
+	// rollup keeper
+	app.RollupKeeper = rollupkeeper.NewKeeper(
+		appCodec,
+		keys[rollupmoduletypes.StoreKey],
+		keys[rollupmoduletypes.MemStoreKey],
+		app.GetSubspace(rollupmoduletypes.ModuleName),
+		&app.MintKeeper,
+		app.BankKeeper,
+	)
 
 	// Create IBC Keeper
 	app.IBCKeeper = ibckeeper.NewKeeper(
@@ -589,6 +609,7 @@ func New(
 		transferModule,
 		icaModule,
 		gmModule,
+		rollupmodule.NewAppModule(appCodec, app.RollupKeeper),
 		// this line is used by starport scaffolding # stargate/app/appModule
 
 		crisis.NewAppModule(app.CrisisKeeper, skipGenesisInvariants, app.GetSubspace(crisistypes.ModuleName)), // always be last to make sure that it checks for all invariants and not only part of them
@@ -622,6 +643,7 @@ func New(
 		vestingtypes.ModuleName,
 		consensusparamtypes.ModuleName,
 		gmmoduletypes.ModuleName,
+		rollupmoduletypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/beginBlockers
 	)
 
@@ -648,6 +670,7 @@ func New(
 		vestingtypes.ModuleName,
 		consensusparamtypes.ModuleName,
 		gmmoduletypes.ModuleName,
+		rollupmoduletypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/endBlockers
 	)
 
@@ -679,6 +702,7 @@ func New(
 		vestingtypes.ModuleName,
 		consensusparamtypes.ModuleName,
 		gmmoduletypes.ModuleName,
+		rollupmoduletypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/initGenesis
 	}
 	app.mm.SetOrderInitGenesis(genesisModuleOrder...)
@@ -904,6 +928,7 @@ func initParamsKeeper(appCodec codec.BinaryCodec, legacyAmino *codec.LegacyAmino
 	paramsKeeper.Subspace(icacontrollertypes.SubModuleName)
 	paramsKeeper.Subspace(icahosttypes.SubModuleName)
 	paramsKeeper.Subspace(gmmoduletypes.ModuleName)
+	paramsKeeper.Subspace(rollupmoduletypes.ModuleName)
 	// this line is used by starport scaffolding # stargate/app/paramSubspace
 
 	return paramsKeeper

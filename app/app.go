@@ -121,9 +121,9 @@ import (
 	appparams "github.com/joshklop/gm/app/params"
 	"github.com/joshklop/gm/docs"
 
-	rollupmodule "github.com/polymerdao/polymerase/chain/x/rollup"
-	rollupkeeper "github.com/polymerdao/polymerase/chain/x/rollup/keeper"
-	rollupmoduletypes "github.com/polymerdao/polymerase/chain/x/rollup/types"
+	rollupmodule "github.com/joshklop/monomer/x/rollup"
+	rollupkeeper "github.com/joshklop/monomer/x/rollup/keeper"
+	rollupmoduletypes "github.com/joshklop/monomer/x/rollup/types"
 )
 
 const (

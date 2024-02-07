@@ -8,9 +8,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	"github.com/cosmos/cosmos-sdk/x/simulation"
-	"github.com/joshklop/gm/testutil/sample"
-	gmsimulation "github.com/joshklop/gm/x/gm/simulation"
-	"github.com/joshklop/gm/x/gm/types"
+	"github.com/joshklop/gm-monomer/testutil/sample"
+	gmsimulation "github.com/joshklop/gm-monomer/x/gm/simulation"
+	"github.com/joshklop/gm-monomer/x/gm/types"
 )
 
 // avoid unused import issue

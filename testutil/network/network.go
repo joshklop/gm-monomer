@@ -18,7 +18,7 @@ import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/joshklop/gm/app"
+	"github.com/joshklop/gm-monomer/app"
 )
 
 type (

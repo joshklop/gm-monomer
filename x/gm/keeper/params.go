@@ -2,7 +2,7 @@ package keeper
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/joshklop/gm/x/gm/types"
+	"github.com/joshklop/gm-monomer/x/gm/types"
 )
 
 // GetParams get all parameters as types.Params

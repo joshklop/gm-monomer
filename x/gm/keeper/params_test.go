@@ -3,8 +3,8 @@ package keeper_test
 import (
 	"testing"
 
-	testkeeper "github.com/joshklop/gm/testutil/keeper"
-	"github.com/joshklop/gm/x/gm/types"
+	testkeeper "github.com/joshklop/gm-monomer/testutil/keeper"
+	"github.com/joshklop/gm-monomer/x/gm/types"
 	"github.com/stretchr/testify/require"
 )
 

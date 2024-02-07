@@ -6,8 +6,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/server"
 	svrcmd "github.com/cosmos/cosmos-sdk/server/cmd"
 
-	"github.com/joshklop/gm/app"
-	"github.com/joshklop/gm/cmd/gmd/cmd"
+	"github.com/joshklop/gm-monomer/app"
+	"github.com/joshklop/gm-monomer/cmd/gmd/cmd"
 )
 
 func main() {

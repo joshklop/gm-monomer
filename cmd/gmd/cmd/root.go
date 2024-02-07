@@ -38,8 +38,8 @@ import (
 	"github.com/spf13/pflag"
 	// this line is used by starport scaffolding # root/moduleImport
 
-	"github.com/joshklop/gm/app"
-	appparams "github.com/joshklop/gm/app/params"
+	"github.com/joshklop/gm-monomer/app"
+	appparams "github.com/joshklop/gm-monomer/app/params"
 )
 
 // NewRootCmd creates a new root command for a Cosmos SDK application

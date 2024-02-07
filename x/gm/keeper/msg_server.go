@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/joshklop/gm/x/gm/types"
+	"github.com/joshklop/gm-monomer/x/gm/types"
 )
 
 type msgServer struct {

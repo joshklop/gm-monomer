@@ -3,10 +3,10 @@ package gm_test
 import (
 	"testing"
 
-	keepertest "github.com/joshklop/gm/testutil/keeper"
-	"github.com/joshklop/gm/testutil/nullify"
-	"github.com/joshklop/gm/x/gm"
-	"github.com/joshklop/gm/x/gm/types"
+	keepertest "github.com/joshklop/gm-monomer/testutil/keeper"
+	"github.com/joshklop/gm-monomer/testutil/nullify"
+	"github.com/joshklop/gm-monomer/x/gm"
+	"github.com/joshklop/gm-monomer/x/gm/types"
 	"github.com/stretchr/testify/require"
 )
 

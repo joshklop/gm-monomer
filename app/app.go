@@ -109,21 +109,21 @@ import (
 	ibctm "github.com/cosmos/ibc-go/v7/modules/light-clients/07-tendermint"
 	"github.com/spf13/cast"
 
-	gmmodule "github.com/joshklop/gm/x/gm"
-	gmmodulekeeper "github.com/joshklop/gm/x/gm/keeper"
-	gmmoduletypes "github.com/joshklop/gm/x/gm/types"
+	gmmodule "github.com/joshklop/gm-monomer/x/gm"
+	gmmodulekeeper "github.com/joshklop/gm-monomer/x/gm/keeper"
+	gmmoduletypes "github.com/joshklop/gm-monomer/x/gm/types"
 	// this line is used by starport scaffolding # stargate/app/moduleImport
 
 	// overide ibc module to allow Polymer specific ibc light clients
 	ibc "github.com/cosmos/ibc-go/v7/modules/core"
 	//"github.com/polymerdao/polymerase/chain/x/ibc"
 
-	appparams "github.com/joshklop/gm/app/params"
-	"github.com/joshklop/gm/docs"
+	appparams "github.com/joshklop/gm-monomer/app/params"
+	"github.com/joshklop/gm-monomer/docs"
 
-	rollupmodule "github.com/joshklop/monomer/x/rollup"
-	rollupkeeper "github.com/joshklop/monomer/x/rollup/keeper"
-	rollupmoduletypes "github.com/joshklop/monomer/x/rollup/types"
+	rollupmodule "github.com/joshklop/x/rollup"
+	rollupkeeper "github.com/joshklop/x/rollup/keeper"
+	rollupmoduletypes "github.com/joshklop/x/rollup/types"
 )
 
 const (

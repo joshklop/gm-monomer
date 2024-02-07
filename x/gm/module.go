@@ -16,9 +16,9 @@ import (
 	cdctypes "github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
-	"github.com/joshklop/gm/x/gm/client/cli"
-	"github.com/joshklop/gm/x/gm/keeper"
-	"github.com/joshklop/gm/x/gm/types"
+	"github.com/joshklop/gm-monomer/x/gm/client/cli"
+	"github.com/joshklop/gm-monomer/x/gm/keeper"
+	"github.com/joshklop/gm-monomer/x/gm/types"
 )
 
 var (

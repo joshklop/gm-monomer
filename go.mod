@@ -1,6 +1,8 @@
-module github.com/joshklop/gm
+module github.com/joshklop/gm-monomer
 
-go 1.21
+go 1.21.5
+
+toolchain go1.21.6
 
 require (
 	cosmossdk.io/api v0.3.1
@@ -13,7 +15,7 @@ require (
 	github.com/gorilla/mux v1.8.0
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.15.2
-	github.com/polymerdao/polymerase/chain v0.0.0-20240206152953-ccebffd0a782
+	github.com/joshklop/x v0.0.0-00010101000000-000000000000
 	github.com/spf13/cast v1.5.0
 	github.com/spf13/cobra v1.6.1
 	github.com/spf13/pflag v1.0.5
@@ -83,7 +85,7 @@ require (
 	github.com/dgryski/go-farm v0.0.0-20200201041132-a6ae2369ad13 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/dvsekhvalnov/jose2go v1.5.0 // indirect
-	github.com/ethereum-optimism/optimism v1.2.0 // indirect
+	github.com/ethereum-optimism/optimism v1.4.2 // indirect
 	github.com/ethereum-optimism/superchain-registry/superchain v0.0.0-20240103191009-655947053753 // indirect
 	github.com/ethereum/c-kzg-4844 v0.4.0 // indirect
 	github.com/ethereum/go-ethereum v1.13.5 // indirect
@@ -95,6 +97,7 @@ require (
 	github.com/go-kit/log v0.2.1 // indirect
 	github.com/go-logfmt/logfmt v0.6.0 // indirect
 	github.com/go-ole/go-ole v1.2.6 // indirect
+	github.com/go-playground/validator/v10 v10.13.0 // indirect
 	github.com/go-stack/stack v1.8.1 // indirect
 	github.com/godbus/dbus v0.0.0-20190726142602-4481cbc300e2 // indirect
 	github.com/gofrs/flock v0.8.1 // indirect
@@ -166,7 +169,7 @@ require (
 	github.com/rogpeppe/go-internal v1.11.0 // indirect
 	github.com/rs/cors v1.9.0 // indirect
 	github.com/rs/zerolog v1.30.0 // indirect
-	github.com/samber/lo v1.38.1 // indirect
+	github.com/samber/lo v1.39.0 // indirect
 	github.com/sasha-s/go-deadlock v0.3.1 // indirect
 	github.com/shirou/gopsutil v3.21.11+incompatible // indirect
 	github.com/spf13/afero v1.9.3 // indirect
@@ -210,6 +213,17 @@ require (
 	sigs.k8s.io/yaml v1.3.0 // indirect
 )
 
-replace github.com/joshklop/monomer => ../monomer
+replace github.com/joshklop/x => ../x
 
 replace github.com/syndtr/goleveldb => github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7
+
+replace (
+	// use latest golang.org/x/exp/slices api
+	github.com/cosmos/cosmos-sdk => github.com/polymerdao/cosmos-sdk v0.47.2-0.20231019015026-1f883c9977fd
+	// use latest golang.org/x/exp/slices api
+	github.com/cosmos/gogoproto => github.com/polymerdao/gogoproto v0.0.0-20230905135849-dbeac9fa0743
+	// use polymer's OP version
+	github.com/ethereum-optimism/optimism v1.4.2 => github.com/polymerdao/optimism-dev v1.4.2-polymer-1.1
+	// use OP's fork of op-geth
+	github.com/ethereum/go-ethereum v1.13.5 => github.com/ethereum-optimism/op-geth v1.101305.2-rc.2.0.20240117002010-d5f142e54a0a
+)

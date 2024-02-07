@@ -3,7 +3,7 @@ package cmd
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/joshklop/gm/app"
+	"github.com/joshklop/gm-monomer/app"
 )
 
 func initSDKConfig() {

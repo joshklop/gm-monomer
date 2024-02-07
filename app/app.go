@@ -121,9 +121,9 @@ import (
 	appparams "github.com/joshklop/gm-monomer/app/params"
 	"github.com/joshklop/gm-monomer/docs"
 
-	rollupmodule "github.com/joshklop/x/rollup"
-	rollupkeeper "github.com/joshklop/x/rollup/keeper"
-	rollupmoduletypes "github.com/joshklop/x/rollup/types"
+	rollupmodule "github.com/joshklop/x-rollup"
+	rollupkeeper "github.com/joshklop/x-rollup/keeper"
+	rollupmoduletypes "github.com/joshklop/x-rollup/types"
 )
 
 const (

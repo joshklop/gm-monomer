@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/cosmos/cosmos-sdk/testutil/network"
+	"github.com/joshklop/monomer-cosmos-sdk/testutil/network"
 	"github.com/stretchr/testify/require"
 
 	"github.com/joshklop/gm-monomer/app"

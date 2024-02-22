@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	svrcmd "github.com/cosmos/cosmos-sdk/server/cmd"
+	svrcmd "github.com/joshklop/monomer-cosmos-sdk/server/cmd"
 
 	"github.com/joshklop/gm-monomer/app"
 	"github.com/joshklop/gm-monomer/cmd/gm-monomerd/cmd"

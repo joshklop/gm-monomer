@@ -3,7 +3,7 @@ package keeper
 import (
 	"context"
 
-	"github.com/cosmos/cosmos-sdk/runtime"
+	"github.com/joshklop/monomer-cosmos-sdk/runtime"
 
 	"github.com/joshklop/gm-monomer/x/gmmonomer/types"
 )

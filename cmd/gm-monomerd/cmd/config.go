@@ -2,8 +2,8 @@ package cmd
 
 import (
 	cmtcfg "github.com/cometbft/cometbft/config"
-	serverconfig "github.com/cosmos/cosmos-sdk/server/config"
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	serverconfig "github.com/joshklop/monomer-cosmos-sdk/server/config"
+	sdk "github.com/joshklop/monomer-cosmos-sdk/types"
 
 	"github.com/joshklop/gm-monomer/app"
 )

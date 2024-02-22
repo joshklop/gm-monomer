@@ -11,8 +11,8 @@ import (
 	math_bits "math/bits"
 
 	_ "github.com/cosmos/cosmos-proto"
-	_ "github.com/cosmos/cosmos-sdk/types/msgservice"
-	_ "github.com/cosmos/cosmos-sdk/types/tx/amino"
+	_ "github.com/joshklop/monomer-cosmos-sdk/types/msgservice"
+	_ "github.com/joshklop/monomer-cosmos-sdk/types/tx/amino"
 	_ "github.com/cosmos/gogoproto/gogoproto"
 	grpc1 "github.com/cosmos/gogoproto/grpc"
 	proto "github.com/cosmos/gogoproto/proto"

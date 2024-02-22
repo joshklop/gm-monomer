@@ -1,7 +1,7 @@
 package gmmonomer
 
 import (
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/joshklop/monomer-cosmos-sdk/types"
 
 	"github.com/joshklop/gm-monomer/x/gmmonomer/keeper"
 	"github.com/joshklop/gm-monomer/x/gmmonomer/types"

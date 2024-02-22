@@ -11,11 +11,11 @@ import (
 
 	abci "github.com/cometbft/cometbft/abci/types"
 
-	"github.com/cosmos/cosmos-sdk/client"
-	"github.com/cosmos/cosmos-sdk/codec"
-	cdctypes "github.com/cosmos/cosmos-sdk/codec/types"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/types/module"
+	"github.com/joshklop/monomer-cosmos-sdk/client"
+	"github.com/joshklop/monomer-cosmos-sdk/codec"
+	cdctypes "github.com/joshklop/monomer-cosmos-sdk/codec/types"
+	sdk "github.com/joshklop/monomer-cosmos-sdk/types"
+	"github.com/joshklop/monomer-cosmos-sdk/types/module"
 	"github.com/joshklop/gm-monomer/x/gm/client/cli"
 	"github.com/joshklop/gm-monomer/x/gm/keeper"
 	"github.com/joshklop/gm-monomer/x/gm/types"

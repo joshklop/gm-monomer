@@ -1,8 +1,8 @@
 package cli
 
 import (
-	"github.com/cosmos/cosmos-sdk/client"
-	"github.com/cosmos/cosmos-sdk/client/flags"
+	"github.com/joshklop/monomer-cosmos-sdk/client"
+	"github.com/joshklop/monomer-cosmos-sdk/client/flags"
 	"github.com/spf13/cobra"
 
 	"github.com/joshklop/gm-monomer/x/gm/types"

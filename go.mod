@@ -8,7 +8,7 @@ require (
 	cosmossdk.io/api v0.3.1
 	github.com/cometbft/cometbft v0.37.2
 	github.com/cometbft/cometbft-db v0.7.0
-	github.com/cosmos/cosmos-sdk v0.47.5
+        github.com/joshklop/monomer-cosmos-sdk v0.50.4-0.20240222120031-25838b0950a8
 	github.com/cosmos/gogoproto v1.4.10
 	github.com/cosmos/ibc-go/v7 v7.1.0
 	github.com/golang/protobuf v1.5.3

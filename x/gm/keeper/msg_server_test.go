@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/joshklop/monomer-cosmos-sdk/types"
 	keepertest "github.com/joshklop/gm-monomer/testutil/keeper"
 	"github.com/joshklop/gm-monomer/x/gm/keeper"
 	"github.com/joshklop/gm-monomer/x/gm/types"

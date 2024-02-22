@@ -3,7 +3,7 @@ package types
 // DONTCOVER
 
 import (
-	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
+	sdkerrors "github.com/joshklop/monomer-cosmos-sdk/types/errors"
 )
 
 // x/gm module sentinel errors

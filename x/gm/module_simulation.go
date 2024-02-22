@@ -3,11 +3,11 @@ package gm
 import (
 	"math/rand"
 
-	"github.com/cosmos/cosmos-sdk/baseapp"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/cosmos/cosmos-sdk/types/module"
-	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
-	"github.com/cosmos/cosmos-sdk/x/simulation"
+	"github.com/joshklop/monomer-cosmos-sdk/baseapp"
+	sdk "github.com/joshklop/monomer-cosmos-sdk/types"
+	"github.com/joshklop/monomer-cosmos-sdk/types/module"
+	simtypes "github.com/joshklop/monomer-cosmos-sdk/types/simulation"
+	"github.com/joshklop/monomer-cosmos-sdk/x/simulation"
 	"github.com/joshklop/gm-monomer/testutil/sample"
 	gmsimulation "github.com/joshklop/gm-monomer/x/gm/simulation"
 	"github.com/joshklop/gm-monomer/x/gm/types"

@@ -3,7 +3,7 @@ package keeper_test
 import (
 	"testing"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdk "github.com/joshklop/monomer-cosmos-sdk/types"
 	testkeeper "github.com/joshklop/gm-monomer/testutil/keeper"
 	"github.com/joshklop/gm-monomer/x/gm/types"
 	"github.com/stretchr/testify/require"

@@ -6,11 +6,11 @@ import (
 	"log"
 
 	tmproto "github.com/cometbft/cometbft/proto/tendermint/types"
-	servertypes "github.com/cosmos/cosmos-sdk/server/types"
-	sdk "github.com/cosmos/cosmos-sdk/types"
-	slashingtypes "github.com/cosmos/cosmos-sdk/x/slashing/types"
-	"github.com/cosmos/cosmos-sdk/x/staking"
-	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
+	servertypes "github.com/joshklop/monomer-cosmos-sdk/server/types"
+	sdk "github.com/joshklop/monomer-cosmos-sdk/types"
+	slashingtypes "github.com/joshklop/monomer-cosmos-sdk/x/slashing/types"
+	"github.com/joshklop/monomer-cosmos-sdk/x/staking"
+	stakingtypes "github.com/joshklop/monomer-cosmos-sdk/x/staking/types"
 )
 
 // ExportAppStateAndValidators exports the state of the application for a genesis

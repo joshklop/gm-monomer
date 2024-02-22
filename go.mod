@@ -3,6 +3,7 @@ module github.com/joshklop/gm-monomer
 go 1.21
 
 replace (
+	github.com/cosmos/cosmos-sdk => github.com/joshklop/monomer-cosmos-sdk v0.50.4-0.20240222120031-25838b0950a8
 	// fix upstream GHSA-h395-qcrw-5vmq vulnerability.
 	github.com/gin-gonic/gin => github.com/gin-gonic/gin v1.7.0
 	// replace broken goleveldb

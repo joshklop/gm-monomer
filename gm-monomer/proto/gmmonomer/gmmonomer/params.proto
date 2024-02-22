@@ -1,0 +1,15 @@
+syntax = "proto3";
+package gmmonomer.gmmonomer;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "github.com/joshklop/gm-monomer/x/gmmonomer/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (amino.name) = "gmmonomer/x/gmmonomer/Params";
+  option (gogoproto.equal) = true;
+
+  
+}

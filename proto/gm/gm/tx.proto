@@ -1,7 +1,0 @@
-syntax = "proto3";
-package gm.gm;
-
-option go_package = "github.com/joshklop/gm/x/gm/types";
-
-// Msg defines the Msg service.
-service Msg {}
